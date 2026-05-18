@@ -493,6 +493,73 @@
             font-size: 0.85rem;
         }
 
+        /* Testimonials */
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+        }
+
+        .testimonial-card {
+            background: var(--bg-card);
+            padding: 2rem;
+            border-radius: 16px;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            position: relative;
+            transition: all 0.3s ease;
+        }
+
+        .testimonial-card:hover {
+            border-color: var(--accent-primary);
+            transform: translateY(-5px);
+            box-shadow: 0 10px 40px rgba(0, 212, 255, 0.1);
+        }
+
+        .testimonial-card::before {
+            content: '"';
+            position: absolute;
+            top: 1rem;
+            left: 1.5rem;
+            font-size: 4rem;
+            color: var(--accent-primary);
+            opacity: 0.3;
+            font-family: Georgia, serif;
+            line-height: 1;
+        }
+
+        .testimonial-content {
+            margin-top: 1.5rem;
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            line-height: 1.7;
+            margin-bottom: 1.5rem;
+        }
+
+        .testimonial-project {
+            color: var(--accent-primary);
+            font-weight: 600;
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+        }
+
+        .testimonial-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 1rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .testimonial-author {
+            font-weight: 600;
+            color: var(--text-primary);
+        }
+
+        .testimonial-date {
+            color: var(--text-muted);
+            font-size: 0.85rem;
+        }
+
         /* Blog Section */
         #blog {
             background: var(--bg-secondary);
@@ -969,6 +1036,47 @@
                 <div class="cert-info">
                     <h4>Programming Foundations</h4>
                     <p>Coursera</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials">
+        <h2 class="section-title" data-aos="fade-up">Recognition</h2>
+        <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">What colleagues say about my work</p>
+
+        <div class="testimonials-grid">
+            <div class="testimonial-card" data-aos="fade-up" data-aos-delay="100">
+                <div class="testimonial-project">Keycloak Integration Project</div>
+                <div class="testimonial-content">
+                    "Special appreciation to Mani for leading the POC, designing the architecture, and driving the complete end-to-end development with clarity and ownership. This was a complex and high-impact initiative — a major upgrade to peopleHum's authentication framework."
+                </div>
+                <div class="testimonial-footer">
+                    <span class="testimonial-author">Mayuresh Madhukar Kulkarni</span>
+                    <span class="testimonial-date">Nov 2025</span>
+                </div>
+            </div>
+
+            <div class="testimonial-card" data-aos="fade-up" data-aos-delay="200">
+                <div class="testimonial-project">Leave Segregation & Data Migration</div>
+                <div class="testimonial-content">
+                    "I would like to thank Manikandan for their thorough approach during development and validation. Migrating all three workflows simultaneously with a large scale data migration was particularly challenging. Their diligence ensured almost no impact on customers."
+                </div>
+                <div class="testimonial-footer">
+                    <span class="testimonial-author">Riya Murari Sharma</span>
+                    <span class="testimonial-date">Sep 2024</span>
+                </div>
+            </div>
+
+            <div class="testimonial-card" data-aos="fade-up" data-aos-delay="300">
+                <div class="testimonial-project">E-Signature Service Revamp</div>
+                <div class="testimonial-content">
+                    "Great work revamping the e-signature service and deploying it to production. Excellent implementation by Mani. Thank you for all the hard work and dedication you have put into this project. Keep it up!"
+                </div>
+                <div class="testimonial-footer">
+                    <span class="testimonial-author">Revanth Gaduputi</span>
+                    <span class="testimonial-date">Mar 2023</span>
                 </div>
             </div>
         </div>
